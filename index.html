@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batting Cleanup — Marketing Rollout Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #ffffff;
+      --surface:   #f8faf8;
+      --surface-2: #f0f4f0;
+      --surface-3: #e8ede8;
+      --border:    rgba(0,0,0,0.09);
+      --border-strong: rgba(0,0,0,0.2);
+      --text:      #1a1a1a;
+      --text-sec:  #4a5a4a;
+      --text-dim:  #8a9a8a;
+      --accent:    #E8821A;       /* poster orange */
+      --accent-dim: rgba(232,130,26,0.10);
+      --accent-border: rgba(232,130,26,0.32);
+      --green:     #2E8B4E;       /* QR green */
+      --green-dim: rgba(46,139,78,0.10);
+      --purple:    #8B7FE8;       /* scanner bracket lavender */
+      --purple-dim: rgba(139,127,232,0.10);
+      --purple-border: rgba(139,127,232,0.30);
+      --red:       #cc3333;
+      --max:       1060px;
+      --pad:       40px;
+      --radius:    6px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Karla', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(46,139,78,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(46,139,78,0.07) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 var(--pad);
+    }
+
+    .header-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo {
+      font-family: 'Karla', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.75rem;
+    }
+
+    .header-date {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 80px var(--pad) 72px;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 5% 50%, rgba(46,139,78,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: 'Spectral', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);  /* orange — keep for hero */
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-sec);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-dates {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .hero-dates i { color: var(--accent); }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--purple-dim);
+      border: 1px solid var(--purple-border);
+      color: var(--purple);
+      padding: 10px 18px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    /* ── PROGRESS BAR ── */
+    .progress-section {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px var(--pad) 0;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-sec);
+    }
+
+    .progress-label span { color: var(--accent); }
+
+    .progress-track {
+      height: 6px;
+      background: var(--surface-3);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--green), #5abf7a);
+      border-radius: 99px;
+      transition: width 0.6s ease;
+    }
+
+    /* ── WEEK NAV ── */
+    .week-nav {
+      position: sticky;
+      top: 60px;
+      z-index: 90;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .week-nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .week-nav-inner::-webkit-scrollbar { display: none; }
+
+    .week-btn {
+      flex-shrink: 0;
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      font-family: 'Karla', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 16px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+
+    .week-btn:hover { color: var(--text); }
+    .week-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* ── MAIN ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px var(--pad) 80px;
+    }
+
+    /* ── WEEK SECTIONS ── */
+    .week-section {
+      display: none;
+    }
+
+    .week-section.active {
+      display: block;
+    }
+
+    .week-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .week-badge {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: var(--green);
+      color: #fff;
+      font-family: 'Spectral', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .week-badge.opening {
+      background: var(--purple);
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .week-title-block { flex: 1; }
+
+    .week-dates {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+
+    .week-title {
+      font-family: 'Spectral', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .week-theme {
+      font-size: 0.9rem;
+      color: var(--text-sec);
+      font-style: italic;
+    }
+
+    .week-objective {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--green);
+      padding: 18px 22px;
+      border-radius: var(--radius);
+      margin-bottom: 32px;
+      font-size: 1rem;
+      color: var(--text-sec);
+      line-height: 1.65;
+    }
+
+    .week-objective strong {
+      color: var(--text);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ── CHECKLIST GROUPS ── */
+    .checklist-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .checklist-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .group-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .group-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--purple-dim);
+      border: 1px solid var(--purple-border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--purple);
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .group-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .group-progress {
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-weight: 700;
+    }
+
+    .checklist-items {
+      padding: 12px 0;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 9px 18px;
+      cursor: pointer;
+      transition: background 0.15s;
+      user-select: none;
+    }
+
+    .check-item:hover { background: var(--surface-2); }
+
+    .check-item input[type="checkbox"] {
+      display: none;
+    }
+
+    .check-box {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border: 1.5px solid var(--border-strong);
+      border-radius: 3px;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .check-box i {
+      font-size: 0.6rem;
+      color: #000;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    .check-item.checked .check-box {
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    .check-box i { color: #fff; }
+
+    .check-item.checked .check-box i { opacity: 1; }
+
+    .check-item.checked .check-label {
+      color: var(--text-dim);
+      text-decoration: line-through;
+    }
+
+    .check-label {
+      font-size: 0.95rem;
+      color: var(--text-sec);
+      line-height: 1.5;
+      transition: color 0.2s;
+    }
+
+    /* ── SUCCESS SIGNAL ── */
+    .success-signal {
+      background: rgba(46,139,78,0.06);
+      border: 1px solid rgba(46,139,78,0.22);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-top: 8px;
+    }
+
+    .success-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 14px;
+    }
+
+    .success-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 5px 0;
+      font-size: 0.95rem;
+      color: var(--text-sec);
+    }
+
+    .success-item i {
+      color: var(--green);
+      margin-top: 3px;
+      flex-shrink: 0;
+      font-size: 0.8rem;
+    }
+
+    /* ── STRATEGIC NOTE ── */
+    .strategic-note {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    .strategic-note .eyebrow { justify-content: center; margin-bottom: 20px; }
+
+    .strategic-note h2 {
+      font-family: 'Spectral', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+
+    .not-about {
+      font-size: 1.1rem;
+      color: var(--text-sec);
+      margin-bottom: 28px;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .pillar {
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: left;
+    }
+
+    .pillar i {
+      color: var(--green);
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      display: block;
+    }
+
+    .pillar-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .entry-point {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    /* ── OPENING DAY ── */
+    .opening-day-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .od-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .od-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .od-card-header i {
+      color: var(--purple);
+      font-size: 1rem;
+    }
+
+    .od-card-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    /* ── OVERALL PROGRESS ── */
+    .overall-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Spectral', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 680px) {
+      :root { --pad: 20px; }
+      .hero { padding: 48px var(--pad) 40px; }
+      .hero-meta { flex-direction: column; align-items: flex-start; }
+      .overall-stats { grid-template-columns: 1fr 1fr; }
+      .overall-stats .stat-card:last-child { grid-column: span 2; }
+      .week-header { flex-direction: column; gap: 12px; }
+      .checklist-groups { grid-template-columns: 1fr; }
+      .pillars { grid-template-columns: 1fr 1fr; }
+      .strategic-note { padding: 24px 20px; }
+      .opening-day-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="header-logo" href="#">
+      <div class="logo-icon"><i class="fa-solid fa-baseball"></i></div>
+      Batting Cleanup
+    </a>
+    <div class="header-date">March 7 → April 7, 2025</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Marketing Rollout Plan</div>
+    <h1>Five Weeks to<br><em>Opening Day.</em></h1>
+    <p class="hero-sub">A QR-powered downtown reporting system, built by students, activated on Opening Day. Track every checklist item week by week.</p>
+    <div class="hero-meta">
+      <div class="hero-dates">
+        <i class="fa-regular fa-calendar"></i>
+        March 7 &rarr; April 7 (Opening Day)
+      </div>
+      <div class="hero-pill">
+        <i class="fa-solid fa-rocket"></i>
+        5-Week Sprint
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="progress-section">
+  <div class="progress-label">
+    <span>Overall Progress</span>
+    <span id="progress-pct">0%</span>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+  </div>
+</div>
+
+<!-- WEEK NAV -->
+<nav class="week-nav">
+  <div class="week-nav-inner">
+    <button class="week-btn active" onclick="showWeek('week1', this)">Week 1</button>
+    <button class="week-btn" onclick="showWeek('week2', this)">Week 2</button>
+    <button class="week-btn" onclick="showWeek('week3', this)">Week 3</button>
+    <button class="week-btn" onclick="showWeek('week4', this)">Week 4</button>
+    <button class="week-btn" onclick="showWeek('week5', this)">Week 5</button>
+    <button class="week-btn" onclick="showWeek('opening', this)">⚾ Opening Day</button>
+    <button class="week-btn" onclick="showWeek('strategy', this)">Strategy</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- OVERALL STATS -->
+  <div class="overall-stats">
+    <div class="stat-card">
+      <div class="stat-num" id="stat-done">0</div>
+      <div class="stat-label">Completed</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="stat-remaining">0</div>
+      <div class="stat-label">Remaining</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="stat-total">0</div>
+      <div class="stat-label">Total Tasks</div>
+    </div>
+  </div>
+
+  <!-- ── WEEK 1 ── -->
+  <div class="week-section active" id="week1">
+    <div class="week-header">
+      <div class="week-badge">1</div>
+      <div class="week-title-block">
+        <div class="week-dates">March 7 – 13</div>
+        <div class="week-title">Kickoff + Awareness</div>
+        <div class="week-theme">"Something is coming downtown"</div>
+      </div>
+    </div>
+
+    <div class="week-objective">
+      <strong>Objective</strong>
+      Announce the project publicly and begin documenting the build and testing journey.
+    </div>
+
+    <div class="checklist-groups">
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-wrench"></i></div>
+          <span class="group-title">App + QR Prep</span>
+          <span class="group-progress" data-group="w1-app"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item checked" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Confirm QR system generates correct report form</span>
+          </label>
+          <label class="check-item checked" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Test QR scan on iPhone + Android</span>
+          </label>
+          <label class="check-item checked" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Confirm submission emails / logging work</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Create test receptacle list</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <span class="group-title">Social Launch Posts</span>
+          <span class="group-progress" data-group="w1-social"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: "Introducing Batting Cleanup"</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: What problem we're solving downtown</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: Why QR reporting matters</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Mention Opening Day activation coming</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-video"></i></div>
+          <span class="group-title">Content Capture</span>
+          <span class="group-progress" data-group="w1-content"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Film: students testing QR codes</span>
+          </label>
+          <label class="check-item checked" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Film: walking downtown scouting locations</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Film: laptop screen showing app build</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Film: team discussion clips</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-image"></i></div>
+          <span class="group-title">Poster Campaign Prep</span>
+          <span class="group-progress" data-group="w1-poster"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Finalize lobby poster design</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Create printable PDF</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Create QR for poster version</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Prepare outreach list: apartments, hotels, office buildings</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="success-signal">
+      <div class="success-title"><i class="fa-solid fa-flag-checkered"></i> Success Signal</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> First public announcement made</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> First behind-the-scenes content captured</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> QR system technically functioning</div>
+    </div>
+  </div>
+
+  <!-- ── WEEK 2 ── -->
+  <div class="week-section" id="week2">
+    <div class="week-header">
+      <div class="week-badge">2</div>
+      <div class="week-title-block">
+        <div class="week-dates">March 14 – 20</div>
+        <div class="week-title">Public Testing + Visibility</div>
+        <div class="week-theme">Start placing test signage downtown</div>
+      </div>
+    </div>
+
+    <div class="week-objective">
+      <strong>Objective</strong>
+      Start placing test signage downtown and show real-world usage.
+    </div>
+
+    <div class="checklist-groups">
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-map-pin"></i></div>
+          <span class="group-title">Field Testing</span>
+          <span class="group-progress" data-group="w2-field"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Place temporary QR signage on test receptacles</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Run full reporting simulation</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Verify email / report routing accuracy</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Document response time</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-video"></i></div>
+          <span class="group-title">Content Capture</span>
+          <span class="group-progress" data-group="w2-content"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Film: someone scanning QR live</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Film: showing report submission</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Film: walking through downtown with map</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <span class="group-title">Social Content</span>
+          <span class="group-progress" data-group="w2-social"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: "We tested the system in the field today"</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: short video demo</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: show downtown locations (blurred/generalized)</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Clip published as TikTok/Reel + LinkedIn + YouTube Short</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-building"></i></div>
+          <span class="group-title">Lobby Poster Outreach</span>
+          <span class="group-progress" data-group="w2-poster"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Contact first 5 apartment managers</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Ask permission to place posters</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Schedule placements</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="success-signal">
+      <div class="success-title"><i class="fa-solid fa-flag-checkered"></i> Success Signal</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> QR works in real environment</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> First real downtown footage exists</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> First building agrees to poster</div>
+    </div>
+  </div>
+
+  <!-- ── WEEK 3 ── -->
+  <div class="week-section" id="week3">
+    <div class="week-header">
+      <div class="week-badge">3</div>
+      <div class="week-title-block">
+        <div class="week-dates">March 21 – 27</div>
+        <div class="week-title">Expansion + Community Buy-In</div>
+        <div class="week-theme">Make it feel like a movement, not a student project</div>
+      </div>
+    </div>
+
+    <div class="week-objective">
+      <strong>Objective</strong>
+      Make Batting Cleanup feel like a community movement, not a student project.
+    </div>
+
+    <div class="checklist-groups">
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-image"></i></div>
+          <span class="group-title">Poster Installations</span>
+          <span class="group-progress" data-group="w3-poster"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Install posters in confirmed buildings</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Photograph each install</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Log building + date for each install</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-map-pin"></i></div>
+          <span class="group-title">Expand QR Locations</span>
+          <span class="group-progress" data-group="w3-qr"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Place more temporary signs downtown</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Verify coverage: residential zones</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Verify coverage: entertainment areas</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Verify coverage: Mud Hens corridor</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-film"></i></div>
+          <span class="group-title">Video Production Week</span>
+          <span class="group-progress" data-group="w3-video"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Record: short interview with student</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Record: short explanation from Mike</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Record: 30-second "why this matters" clip</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Produce one polished campaign video</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <span class="group-title">Social Content</span>
+          <span class="group-progress" data-group="w3-social"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: "Downtown residents are joining the effort"</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: poster install photos</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: community-focused messaging</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="success-signal">
+      <div class="success-title"><i class="fa-solid fa-flag-checkered"></i> Success Signal</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> Posters visible downtown</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> Residents beginning to recognize the brand</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> Enough footage exists for final campaign push</div>
+    </div>
+  </div>
+
+  <!-- ── WEEK 4 ── -->
+  <div class="week-section" id="week4">
+    <div class="week-header">
+      <div class="week-badge">4</div>
+      <div class="week-title-block">
+        <div class="week-dates">March 28 – April 3</div>
+        <div class="week-title">Opening Day Countdown</div>
+        <div class="week-theme">Shift from awareness → anticipation</div>
+      </div>
+    </div>
+
+    <div class="week-objective">
+      <strong>Objective</strong>
+      Shift the campaign from awareness to anticipation. Public should clearly know launch is imminent.
+    </div>
+
+    <div class="checklist-groups">
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-tag"></i></div>
+          <span class="group-title">Sticker Production</span>
+          <span class="group-progress" data-group="w4-sticker"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Finalize sticker design</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Print batch</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Package for distribution teams</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-microphone"></i></div>
+          <span class="group-title">Spokesperson Prep</span>
+          <span class="group-progress" data-group="w4-spoke"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Select volunteers</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Create 20-second explanation script</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Practice quick delivery</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <span class="group-title">Countdown Social Series</span>
+          <span class="group-progress" data-group="w4-social"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: "10 days until Opening Day launch"</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: "Where we've been testing"</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: "What happens when you scan"</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-film"></i></div>
+          <span class="group-title">Publish Main Campaign Video</span>
+          <span class="group-progress" data-group="w4-video"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Includes: the problem</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Includes: QR solution</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Includes: students building it</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Includes: Opening Day activation</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="success-signal">
+      <div class="success-title"><i class="fa-solid fa-flag-checkered"></i> Success Signal</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> Public clearly knows launch is coming</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> Volunteers ready</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> Stickers ready</div>
+    </div>
+  </div>
+
+  <!-- ── WEEK 5 ── -->
+  <div class="week-section" id="week5">
+    <div class="week-header">
+      <div class="week-badge">5</div>
+      <div class="week-title-block">
+        <div class="week-dates">April 4 – 6</div>
+        <div class="week-title">Final Deployment</div>
+        <div class="week-theme">Install official QR codes + finalize activation logistics</div>
+      </div>
+    </div>
+
+    <div class="week-objective">
+      <strong>Objective</strong>
+      Install official QR codes and finalize all Opening Day activation logistics. Every system verified live.
+    </div>
+
+    <div class="checklist-groups">
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-qrcode"></i></div>
+          <span class="group-title">QR Install</span>
+          <span class="group-progress" data-group="w5-qr"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Place official Mud Hens stadium receptacle QR codes</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Place additional downtown strategic units</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Verify every QR live</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-flask"></i></div>
+          <span class="group-title">Final System Test</span>
+          <span class="group-progress" data-group="w5-test"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Run 10 real reports</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Verify each report arrives correctly</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Confirm response workflow ready</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="checklist-group">
+        <div class="group-header">
+          <div class="group-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <span class="group-title">Final Social Push</span>
+          <span class="group-progress" data-group="w5-social"></span>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: "QR codes go live this week"</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: behind-the-scenes install footage</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Post: Opening Day reminder</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="success-signal">
+      <div class="success-title"><i class="fa-solid fa-flag-checkered"></i> Success Signal</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> Every QR verified live</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> Staff confident the system works</div>
+      <div class="success-item"><i class="fa-solid fa-check"></i> Social buzz rising</div>
+    </div>
+  </div>
+
+  <!-- ── OPENING DAY ── -->
+  <div class="week-section" id="opening">
+    <div class="week-header">
+      <div class="week-badge opening"><i class="fa-solid fa-baseball"></i></div>
+      <div class="week-title-block">
+        <div class="week-dates" style="color: var(--purple);">April 7, 2025</div>
+        <div class="week-title">Opening Day — Public Activation</div>
+        <div class="week-theme">The moment everything was building toward</div>
+      </div>
+    </div>
+
+    <div class="week-objective" style="border-left-color: var(--purple);">
+      <strong>Objective</strong>
+      Execute the public activation at and around the Mud Hens stadium. Capture everything. Post live.
+    </div>
+
+    <div class="opening-day-grid">
+
+      <div class="od-card">
+        <div class="od-card-header">
+          <i class="fa-solid fa-people-group"></i>
+          <div class="od-card-title">On-Site Operations</div>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Volunteers stationed near stadium</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Stickers ready to distribute</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Demo phones ready</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Spokespeople rotating shifts</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="od-card">
+        <div class="od-card-header">
+          <i class="fa-solid fa-video"></i>
+          <div class="od-card-title">Live Content Team</div>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Capture: people scanning QR codes</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Capture: crowd shots</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Capture: volunteer interactions</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Capture: stadium environment</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="od-card">
+        <div class="od-card-header">
+          <i class="fa-solid fa-tower-broadcast"></i>
+          <div class="od-card-title">Live Posting</div>
+        </div>
+        <div class="checklist-items">
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Morning kickoff post</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Mid-day crowd post</span>
+          </label>
+          <label class="check-item" onclick="toggle(this)">
+            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+            <span class="check-label">Evening recap post</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="success-signal" style="background: rgba(139,127,232,0.06); border-color: rgba(139,127,232,0.22);">
+      <div class="success-title" style="color: var(--purple);"><i class="fa-solid fa-baseball"></i> Game Day</div>
+      <div class="success-item"><i class="fa-solid fa-check" style="color: var(--purple);"></i> Every QR active and working in the wild</div>
+      <div class="success-item"><i class="fa-solid fa-check" style="color: var(--purple);"></i> Real community members reporting in real time</div>
+      <div class="success-item"><i class="fa-solid fa-check" style="color: var(--purple);"></i> Campaign documented and shareable</div>
+    </div>
+  </div>
+
+  <!-- ── STRATEGY ── -->
+  <div class="week-section" id="strategy">
+    <div class="strategic-note">
+      <div class="eyebrow" style="display:block; text-align:center;">Critical Strategic Note</div>
+      <h2>Your campaign is <em>not</em> about trash.</h2>
+      <p class="not-about">Trash is just the visible entry point. The real story is much bigger.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <i class="fa-solid fa-heart"></i>
+          <div class="pillar-label">Civic Pride</div>
+        </div>
+        <div class="pillar">
+          <i class="fa-solid fa-lightbulb"></i>
+          <div class="pillar-label">Student Innovation</div>
+        </div>
+        <div class="pillar">
+          <i class="fa-solid fa-chart-bar"></i>
+          <div class="pillar-label">Downtown Data Intelligence</div>
+        </div>
+        <div class="pillar">
+          <i class="fa-solid fa-users"></i>
+          <div class="pillar-label">Community Participation</div>
+        </div>
+      </div>
+      <p class="entry-point">Every piece of content should connect back to at least one of these pillars — not the trash can.</p>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  function showWeek(id, btn) {
+    document.querySelectorAll('.week-section').forEach(function(s) {
+      s.classList.remove('active');
+    });
+    document.querySelectorAll('.week-btn').forEach(function(b) {
+      b.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function toggle(el) {
+    el.classList.toggle('checked');
+    updateProgress();
+    saveState();
+  }
+
+  function updateProgress() {
+    var all   = document.querySelectorAll('.check-item');
+    var done  = document.querySelectorAll('.check-item.checked');
+    var total = all.length;
+    var count = done.length;
+    var pct   = total > 0 ? Math.round(count / total * 100) : 0;
+
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-pct').textContent   = pct + '%';
+    document.getElementById('stat-done').textContent      = count;
+    document.getElementById('stat-remaining').textContent = total - count;
+    document.getElementById('stat-total').textContent     = total;
+  }
+
+  function encodeState() {
+    var bits = [];
+    document.querySelectorAll('.check-item').forEach(function(el) {
+      bits.push(el.classList.contains('checked') ? '1' : '0');
+    });
+    return btoa(bits.join(''));
+  }
+
+  function applyState(encoded) {
+    var raw;
+    try { raw = atob(encoded); } catch(e) { return false; }
+    var states = raw.split('');
+    document.querySelectorAll('.check-item').forEach(function(el, i) {
+      if (states[i] === '1') { el.classList.add('checked'); }
+      else { el.classList.remove('checked'); }
+    });
+    return true;
+  }
+
+  var LS_KEY = 'batting_cleanup_v2'; // bumped — clears any old saved state
+
+  function saveState() {
+    var encoded = encodeState();
+    try { history.replaceState(null, '', '#' + encoded); } catch(e) {}
+    try { localStorage.setItem(LS_KEY, encoded); } catch(e) {}
+  }
+
+  function loadState() {
+    var encoded = null;
+    if (window.location.hash && window.location.hash.length > 1) {
+      encoded = window.location.hash.slice(1);
+    }
+    if (!encoded) {
+      try { encoded = localStorage.getItem(LS_KEY); } catch(e) {}
+    }
+    if (!encoded) return false;
+    return applyState(encoded);
+  }
+
+  window.addEventListener('load', function() {
+    var loaded = loadState();
+    updateProgress();
+    // No prior saved state — persist the hardcoded checked items right away
+    if (!loaded) saveState();
+  });
+</script>
+</body>
+</html>
