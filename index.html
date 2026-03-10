@@ -439,45 +439,19 @@
       align-items: flex-start;
       gap: 12px;
       padding: 9px 18px;
-      cursor: pointer;
-      transition: background 0.15s;
-      user-select: none;
+      cursor: default;
     }
 
-    .check-item:hover { background: var(--surface-2); }
-
-    .check-item input[type="checkbox"] {
-      display: none;
-    }
-
-    .check-box {
+    .check-icon {
       flex-shrink: 0;
-      width: 18px;
-      height: 18px;
-      border: 1.5px solid var(--border-strong);
-      border-radius: 3px;
+      font-size: 1rem;
       margin-top: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s, border-color 0.2s;
+      color: var(--border-strong);
     }
 
-    .check-box i {
-      font-size: 0.6rem;
-      color: #000;
-      opacity: 0;
-      transition: opacity 0.15s;
+    .check-item.checked .check-icon {
+      color: var(--green);
     }
-
-    .check-item.checked .check-box {
-      background: var(--green);
-      border-color: var(--green);
-    }
-
-    .check-box i { color: #fff; }
-
-    .check-item.checked .check-box i { opacity: 1; }
 
     .check-item.checked .check-label {
       color: var(--text-dim);
@@ -769,20 +743,20 @@
           <span class="group-progress" data-group="w1-app"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item checked" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item checked">
+            <i class="fa-solid fa-square-check check-icon"></i>
             <span class="check-label">Confirm QR system generates correct report form</span>
           </label>
-          <label class="check-item checked" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item checked">
+            <i class="fa-solid fa-square-check check-icon"></i>
             <span class="check-label">Test QR scan on iPhone + Android</span>
           </label>
-          <label class="check-item checked" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item checked">
+            <i class="fa-solid fa-square-check check-icon"></i>
             <span class="check-label">Confirm submission emails / logging work</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Create test receptacle list</span>
           </label>
         </div>
@@ -795,20 +769,20 @@
           <span class="group-progress" data-group="w1-social"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: "Introducing Batting Cleanup"</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: What problem we're solving downtown</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: Why QR reporting matters</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Mention Opening Day activation coming</span>
           </label>
         </div>
@@ -821,20 +795,20 @@
           <span class="group-progress" data-group="w1-content"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Film: students testing QR codes</span>
           </label>
-          <label class="check-item checked" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item checked">
+            <i class="fa-solid fa-square-check check-icon"></i>
             <span class="check-label">Film: walking downtown scouting locations</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Film: laptop screen showing app build</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Film: team discussion clips</span>
           </label>
         </div>
@@ -847,20 +821,20 @@
           <span class="group-progress" data-group="w1-poster"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Finalize lobby poster design</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Create printable PDF</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Create QR for poster version</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Prepare outreach list: apartments, hotels, office buildings</span>
           </label>
         </div>
@@ -901,20 +875,20 @@
           <span class="group-progress" data-group="w2-field"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Place temporary QR signage on test receptacles</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Run full reporting simulation</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Verify email / report routing accuracy</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Document response time</span>
           </label>
         </div>
@@ -927,16 +901,16 @@
           <span class="group-progress" data-group="w2-content"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Film: someone scanning QR live</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Film: showing report submission</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Film: walking through downtown with map</span>
           </label>
         </div>
@@ -949,20 +923,20 @@
           <span class="group-progress" data-group="w2-social"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: "We tested the system in the field today"</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: short video demo</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: show downtown locations (blurred/generalized)</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Clip published as TikTok/Reel + LinkedIn + YouTube Short</span>
           </label>
         </div>
@@ -975,16 +949,16 @@
           <span class="group-progress" data-group="w2-poster"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Contact first 5 apartment managers</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Ask permission to place posters</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Schedule placements</span>
           </label>
         </div>
@@ -1025,16 +999,16 @@
           <span class="group-progress" data-group="w3-poster"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Install posters in confirmed buildings</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Photograph each install</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Log building + date for each install</span>
           </label>
         </div>
@@ -1047,20 +1021,20 @@
           <span class="group-progress" data-group="w3-qr"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Place more temporary signs downtown</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Verify coverage: residential zones</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Verify coverage: entertainment areas</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Verify coverage: Mud Hens corridor</span>
           </label>
         </div>
@@ -1073,20 +1047,20 @@
           <span class="group-progress" data-group="w3-video"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Record: short interview with student</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Record: short explanation from Mike</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Record: 30-second "why this matters" clip</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Produce one polished campaign video</span>
           </label>
         </div>
@@ -1099,16 +1073,16 @@
           <span class="group-progress" data-group="w3-social"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: "Downtown residents are joining the effort"</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: poster install photos</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: community-focused messaging</span>
           </label>
         </div>
@@ -1149,16 +1123,16 @@
           <span class="group-progress" data-group="w4-sticker"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Finalize sticker design</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Print batch</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Package for distribution teams</span>
           </label>
         </div>
@@ -1171,16 +1145,16 @@
           <span class="group-progress" data-group="w4-spoke"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Select volunteers</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Create 20-second explanation script</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Practice quick delivery</span>
           </label>
         </div>
@@ -1193,16 +1167,16 @@
           <span class="group-progress" data-group="w4-social"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: "10 days until Opening Day launch"</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: "Where we've been testing"</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: "What happens when you scan"</span>
           </label>
         </div>
@@ -1215,20 +1189,20 @@
           <span class="group-progress" data-group="w4-video"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Includes: the problem</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Includes: QR solution</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Includes: students building it</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Includes: Opening Day activation</span>
           </label>
         </div>
@@ -1269,16 +1243,16 @@
           <span class="group-progress" data-group="w5-qr"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Place official Mud Hens stadium receptacle QR codes</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Place additional downtown strategic units</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Verify every QR live</span>
           </label>
         </div>
@@ -1291,16 +1265,16 @@
           <span class="group-progress" data-group="w5-test"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Run 10 real reports</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Verify each report arrives correctly</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Confirm response workflow ready</span>
           </label>
         </div>
@@ -1313,16 +1287,16 @@
           <span class="group-progress" data-group="w5-social"></span>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: "QR codes go live this week"</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: behind-the-scenes install footage</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Post: Opening Day reminder</span>
           </label>
         </div>
@@ -1362,20 +1336,20 @@
           <div class="od-card-title">On-Site Operations</div>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Volunteers stationed near stadium</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Stickers ready to distribute</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Demo phones ready</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Spokespeople rotating shifts</span>
           </label>
         </div>
@@ -1387,20 +1361,20 @@
           <div class="od-card-title">Live Content Team</div>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Capture: people scanning QR codes</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Capture: crowd shots</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Capture: volunteer interactions</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Capture: stadium environment</span>
           </label>
         </div>
@@ -1412,16 +1386,16 @@
           <div class="od-card-title">Live Posting</div>
         </div>
         <div class="checklist-items">
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Morning kickoff post</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Mid-day crowd post</span>
           </label>
-          <label class="check-item" onclick="toggle(this)">
-            <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <label class="check-item">
+            <i class="fa-regular fa-square check-icon"></i>
             <span class="check-label">Evening recap post</span>
           </label>
         </div>
