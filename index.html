@@ -152,9 +152,20 @@
     .hero-img-wrap img {
       width: 100%;
       height: 370px;
-      object-fit: cover;
-      object-position: top center;
+      object-fit: contain;
+      object-position: center center;
       display: block;
+      background: var(--surface-2);
+    }
+
+    .hero-brand {
+      font-family: 'Karla', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 10px;
     }
 
     .eyebrow {
@@ -721,6 +732,7 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
+      <div class="hero-brand">Batting Cleanup</div>
       <div class="eyebrow">Marketing Rollout Plan</div>
       <h1>Five Weeks to<br><em>Opening Day.</em></h1>
       <p class="hero-sub">A QR-powered downtown reporting system, built by students, activated on Opening Day. Track every checklist item week by week.</p>
