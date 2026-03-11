@@ -398,6 +398,102 @@
     /* ── COPY AREA (hidden) ── */
     .copy-source { display: none; }
 
+    /* ── QUOTE FEATURE ── */
+    .quote-feature {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+
+    .quote-img-wrap {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      flex-shrink: 0;
+    }
+
+    .quote-img-wrap img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .quote-content {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .pull-quote {
+      position: relative;
+      padding: 32px 32px 32px 40px;
+      background: var(--green-dim);
+      border: 1px solid rgba(46,139,78,0.22);
+      border-radius: 10px;
+    }
+
+    .pull-quote::before {
+      content: '\201C';
+      position: absolute;
+      top: -4px;
+      left: 16px;
+      font-family: 'Spectral', serif;
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--green);
+      opacity: 0.3;
+    }
+
+    .pull-quote blockquote {
+      font-family: 'Spectral', serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.35;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
+
+    .pull-quote cite {
+      display: block;
+      margin-top: 16px;
+      font-family: 'Karla', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+
+    .quote-context {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+
+    .quote-context-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+
+    .quote-context p {
+      font-size: 0.92rem;
+      color: var(--text-sec);
+      line-height: 1.65;
+    }
+
     /* ── TIPS BLOCK ── */
     .tips-block {
       background: var(--surface-2);
@@ -442,6 +538,7 @@
       .graphic-feature { grid-template-columns: 1fr; }
       .posts-grid { grid-template-columns: 1fr; }
       .tips-list { grid-template-columns: 1fr; }
+      .quote-feature { grid-template-columns: 1fr; }
       .page-hero { padding: 48px var(--pad) 40px; }
     }
   </style>
@@ -626,6 +723,24 @@ Every part of this — from the reporting system to the QR poster design to the 
 We're five weeks out from Opening Day activation. We'll be documenting every step.
 
 #ToledoCodes #SmartCity #CivicTech #Toledo #StudentBuilt #OpeningDay</textarea>
+
+  <!-- VANDERPOOL QUOTE -->
+  <div class="section-label"><i class="fa-solid fa-quote-left"></i> From the Field</div>
+  <div class="quote-feature">
+    <div class="quote-img-wrap">
+      <img src="images/marketing/vanderpool-launch-batting-cleanup.jpg" alt="Vanderpool at a downtown receptacle with QR code" />
+    </div>
+    <div class="quote-content">
+      <div class="pull-quote">
+        <blockquote>Show young people they can make positive change in the city.</blockquote>
+        <cite>— Michael Vanderpool, Toledo Codes</cite>
+      </div>
+      <div class="quote-context">
+        <div class="quote-context-label"><i class="fa-solid fa-map-pin"></i> Downtown Toledo</div>
+        <p>The QR sticker is already on the receptacle. Batting Cleanup isn't just a concept — it's deployed and ready. This image captures the moment the system went live on a downtown street corner, with the first scan just seconds away.</p>
+      </div>
+    </div>
+  </div>
 
   <!-- POSTING TIPS -->
   <div class="section-label"><i class="fa-solid fa-lightbulb"></i> Posting Tips</div>
