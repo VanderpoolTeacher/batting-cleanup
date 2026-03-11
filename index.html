@@ -106,6 +106,23 @@
       font-size: 0.75rem;
     }
 
+    .header-nav { display: flex; align-items: center; gap: 4px; }
+
+    .header-nav-link {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: var(--radius);
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .header-nav-link:hover { color: var(--text); background: var(--surface-2); }
+    .header-nav-link.active { color: var(--accent); }
+
     .header-date {
       font-size: 0.85rem;
       color: var(--text-dim);
@@ -721,11 +738,14 @@
 
 <header>
   <div class="header-inner">
-    <a class="header-logo" href="#">
+    <a class="header-logo" href="index.html">
       <div class="logo-icon"><i class="fa-solid fa-baseball"></i></div>
       Batting Cleanup
     </a>
-    <div class="header-date">March 7 → April 7, 2025</div>
+    <nav class="header-nav">
+      <a href="index.html" class="header-nav-link active">Rollout Plan</a>
+      <a href="announce.html" class="header-nav-link">Announce</a>
+    </nav>
   </div>
 </header>
 
