@@ -1086,16 +1086,18 @@ Batting Cleanup launches Opening Day. Follow along.
 
 <script>
   function copyPost(btn, id) {
-    var ta = document.getElementById(id);
-    ta.select();
-    document.execCommand('copy');
-    window.getSelection().removeAllRanges();
-    btn.textContent = 'Copied!';
-    btn.classList.add('copied');
-    setTimeout(function() {
-      btn.textContent = 'Copy';
-      btn.classList.remove('copied');
-    }, 2000);
+    var text = document.getElementById(id).value;
+    navigator.clipboard.writeText(text).then(function() {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(function() {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    }).catch(function() {
+      btn.textContent = 'Failed';
+      setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+    });
   }
 </script>
 
