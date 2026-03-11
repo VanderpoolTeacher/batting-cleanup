@@ -123,6 +123,58 @@
     .header-nav-link:hover { color: var(--text); background: var(--surface-2); }
     .header-nav-link.active { color: var(--accent); }
 
+    /* ── ANNOUNCE CALLOUT ── */
+    .announce-callout {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: var(--green-dim);
+      border: 1px solid rgba(46,139,78,0.25);
+      border-radius: var(--radius);
+      padding: 18px 24px;
+      margin-bottom: 36px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .announce-callout:hover {
+      background: rgba(46,139,78,0.14);
+      border-color: rgba(46,139,78,0.4);
+    }
+
+    .announce-callout-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .announce-callout-text strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .announce-callout-text span {
+      font-size: 0.85rem;
+      color: var(--text-sec);
+    }
+
+    .announce-callout-arrow {
+      margin-left: auto;
+      color: var(--green);
+      font-size: 1rem;
+    }
+
     .header-date {
       font-size: 0.85rem;
       color: var(--text-dim);
@@ -796,6 +848,16 @@
 </nav>
 
 <main>
+
+  <!-- ANNOUNCE CALLOUT -->
+  <a class="announce-callout" href="announce.html">
+    <div class="announce-callout-icon"><i class="fa-solid fa-bullhorn"></i></div>
+    <div class="announce-callout-text">
+      <strong>Week 1 Launch Posts Are Ready</strong>
+      <span>3 posts · Instagram, Twitter/X, LinkedIn · copy-ready with images →</span>
+    </div>
+    <i class="fa-solid fa-arrow-right announce-callout-arrow"></i>
+  </a>
 
   <!-- OVERALL STATS -->
   <div class="overall-stats">
