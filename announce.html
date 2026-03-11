@@ -494,6 +494,31 @@
       line-height: 1.65;
     }
 
+    /* ── POST SECTION HEADING ── */
+    .post-section-h {
+      margin-bottom: 28px;
+    }
+
+    .post-section-h h2 {
+      font-family: 'Spectral', serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .post-section-h h2 em {
+      font-style: italic;
+      color: var(--green);
+    }
+
+    .post-section-h p {
+      font-size: 0.95rem;
+      color: var(--text-sec);
+      max-width: 620px;
+      line-height: 1.65;
+    }
+
     /* ── TIPS BLOCK ── */
     .tips-block {
       background: var(--surface-2);
@@ -568,6 +593,12 @@
 </section>
 
 <main>
+
+  <!-- SECTION 1 HEADING -->
+  <div class="post-section-h">
+    <h2>Post 1 — <em>The Campaign Graphic</em></h2>
+    <p>The official launch image paired with the full announcement. Use this as your first post across all platforms to introduce the project and build anticipation for Opening Day.</p>
+  </div>
 
   <!-- GRAPHIC + NOTES -->
   <div class="section-label"><i class="fa-solid fa-image"></i> Launch Graphic</div>
@@ -724,8 +755,14 @@ We're five weeks out from Opening Day activation. We'll be documenting every ste
 
 #ToledoCodes #SmartCity #CivicTech #Toledo #StudentBuilt #OpeningDay</textarea>
 
+  <!-- SECTION 2 HEADING -->
+  <div class="post-section-h">
+    <h2>Post 2 — <em>From the Field</em></h2>
+    <p>A real moment, downtown Toledo. The QR sticker is live on the receptacle. Use this photo with the quote to show the human side of the project — who's behind it and why it matters.</p>
+  </div>
+
   <!-- VANDERPOOL QUOTE -->
-  <div class="section-label"><i class="fa-solid fa-quote-left"></i> From the Field</div>
+  <div class="section-label"><i class="fa-solid fa-quote-left"></i> Feature Image &amp; Quote</div>
   <div class="quote-feature">
     <div class="quote-img-wrap">
       <img src="images/marketing/vanderpool-launch-batting-cleanup.jpg" alt="Vanderpool at a downtown receptacle with QR code" />
@@ -741,6 +778,138 @@ We're five weeks out from Opening Day activation. We'll be documenting every ste
       </div>
     </div>
   </div>
+
+  <!-- VANDERPOOL POST MOCKUPS -->
+  <div class="section-label"><i class="fa-solid fa-share-nodes"></i> Post Previews</div>
+  <div class="posts-grid">
+
+    <!-- INSTAGRAM -->
+    <div class="post-card instagram">
+      <div class="post-header">
+        <div class="post-avatar">BC</div>
+        <div class="post-handle">
+          batting.cleanup
+          <span>Toledo Codes · sponsored</span>
+        </div>
+        <i class="fa-brands fa-instagram" style="margin-left:auto;color:#c2185b;font-size:1.1rem;"></i>
+      </div>
+      <img class="post-img" src="images/marketing/vanderpool-launch-batting-cleanup.jpg" alt="Vanderpool at downtown receptacle" style="object-position: center 20%;" />
+      <div class="post-body">
+        <div class="post-platform-tag tag-instagram"><i class="fa-brands fa-instagram"></i> Instagram · Facebook</div>
+        <div class="post-copy">It's live. 🎉
+
+The QR sticker is on the receptacle. Downtown Toledo, you can now scan to report a full bin — and it goes straight to the right people.
+
+This is what it looks like when young people solve real city problems.
+
+"Show young people they can make positive change in the city." — Michael Vanderpool, Toledo Codes
+
+We're counting down to Opening Day. More to come. 🗑️⚾</div>
+        <div class="post-hashtags">#BattingCleanup #ToledoCodes #Toledo #SmartCity #OpeningDay #CivicTech #YouthInTech</div>
+      </div>
+      <div class="post-footer">
+        <div class="post-action"><i class="fa-regular fa-heart"></i> Like</div>
+        <div class="post-action"><i class="fa-regular fa-comment"></i> Comment</div>
+        <button class="copy-btn" onclick="copyPost(this, 'v-ig-copy')">Copy</button>
+      </div>
+    </div>
+
+    <!-- TWITTER / X -->
+    <div class="post-card twitter">
+      <div class="post-header">
+        <div class="post-avatar" style="background:#1565c0;">BC</div>
+        <div class="post-handle">
+          @BattingCleanup
+          <span>Toledo Codes</span>
+        </div>
+        <i class="fa-brands fa-x-twitter" style="margin-left:auto;color:#1565c0;font-size:1.1rem;"></i>
+      </div>
+      <img class="post-img" src="images/marketing/vanderpool-launch-batting-cleanup.jpg" alt="Vanderpool at downtown receptacle" style="object-position: center 20%;" />
+      <div class="post-body">
+        <div class="post-platform-tag tag-twitter"><i class="fa-brands fa-x-twitter"></i> Twitter / X</div>
+        <div class="post-copy">It's live. 🗑️⚾
+
+QR sticker. Downtown receptacle. One scan sends a report.
+
+Young people built this.
+
+"Show young people they can make positive change in the city." — Michael Vanderpool</div>
+        <div class="post-hashtags">#BattingCleanup #ToledoCodes #Toledo</div>
+      </div>
+      <div class="post-footer">
+        <div class="post-action"><i class="fa-regular fa-heart"></i> Like</div>
+        <div class="post-action"><i class="fa-solid fa-retweet"></i> Repost</div>
+        <button class="copy-btn" onclick="copyPost(this, 'v-tw-copy')">Copy</button>
+      </div>
+    </div>
+
+    <!-- LINKEDIN -->
+    <div class="post-card linkedin">
+      <div class="post-header">
+        <div class="post-avatar" style="background:#0d47a1;border-radius:6px;">BC</div>
+        <div class="post-handle">
+          Toledo Codes
+          <span>Education · Toledo, OH</span>
+        </div>
+        <i class="fa-brands fa-linkedin" style="margin-left:auto;color:#0d47a1;font-size:1.1rem;"></i>
+      </div>
+      <img class="post-img" src="images/marketing/vanderpool-launch-batting-cleanup.jpg" alt="Vanderpool at downtown receptacle" style="object-position: center 20%;" />
+      <div class="post-body">
+        <div class="post-platform-tag tag-linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</div>
+        <div class="post-copy">The QR code is deployed.
+
+This photo says more than a slide deck ever could. A student-built reporting system, now live on a downtown Toledo street corner.
+
+As Michael Vanderpool put it: "Show young people they can make positive change in the city."
+
+That's exactly what Batting Cleanup is. A real solution to a real problem, built by students, launching Opening Day. The infrastructure is already in place.
+
+Follow along for the full countdown.</div>
+        <div class="post-hashtags">#ToledoCodes #SmartCity #Toledo #YouthInTech #CivicTech #OpeningDay #StudentBuilt</div>
+      </div>
+      <div class="post-footer">
+        <div class="post-action"><i class="fa-regular fa-thumbs-up"></i> React</div>
+        <div class="post-action"><i class="fa-regular fa-comment"></i> Comment</div>
+        <button class="copy-btn" onclick="copyPost(this, 'v-li-copy')">Copy</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HIDDEN COPY SOURCES — VANDERPOOL -->
+  <textarea class="copy-source" id="v-ig-copy">It's live. 🎉
+
+The QR sticker is on the receptacle. Downtown Toledo, you can now scan to report a full bin — and it goes straight to the right people.
+
+This is what it looks like when young people solve real city problems.
+
+"Show young people they can make positive change in the city." — Michael Vanderpool, Toledo Codes
+
+We're counting down to Opening Day. More to come. 🗑️⚾
+
+#BattingCleanup #ToledoCodes #Toledo #SmartCity #OpeningDay #CivicTech #YouthInTech</textarea>
+
+  <textarea class="copy-source" id="v-tw-copy">It's live. 🗑️⚾
+
+QR sticker. Downtown receptacle. One scan sends a report.
+
+Young people built this.
+
+"Show young people they can make positive change in the city." — Michael Vanderpool
+
+#BattingCleanup #ToledoCodes #Toledo</textarea>
+
+  <textarea class="copy-source" id="v-li-copy">The QR code is deployed.
+
+This photo says more than a slide deck ever could. A student-built reporting system, now live on a downtown Toledo street corner.
+
+As Michael Vanderpool put it: "Show young people they can make positive change in the city."
+
+That's exactly what Batting Cleanup is. A real solution to a real problem, built by students, launching Opening Day. The infrastructure is already in place.
+
+Follow along for the full countdown.
+
+#ToledoCodes #SmartCity #Toledo #YouthInTech #CivicTech #OpeningDay #StudentBuilt</textarea>
 
   <!-- POSTING TIPS -->
   <div class="section-label"><i class="fa-solid fa-lightbulb"></i> Posting Tips</div>
